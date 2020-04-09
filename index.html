@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Corey's Survey Form</title>
+</head>
+<header>
+    <h1 id="title"> Welcome to the survey</h1>
+    <p id="description">In this survey, you'll give me everything about you.</p>
+</header>
+<form id = "survey-form" action="/submit-survey-form">
+    <label for="name">
+        Name:<br>
+        <input id="name" type="text" name="name-label" placeholder="Enter your name">
+    </label><br>
+    <label for="email">
+        Email:<br>
+        <input id="email" type="email" name="email-label" placeholder="Enter your email">
+    </label><br>
+    <label for="number">
+        Number:<br>
+        <input id="number" type="number" name="number-label" min="10" max="11" placeholder="555-123-4567">
+    </label><br>
+    <label for="dropdown">
+        Select your role:
+        <select id="dropdown" name="dropdown-label">
+            <option value="volvo">Volvo</option>
+            <option value="volvo">Volvo</option>
+            <option value="volvo">Volvo</option>
+ 
+        </select>
+    </label>
+    <br><input type="submit" value="Submit">
+</form>
+
+</html>
