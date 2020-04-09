@@ -1,35 +1,70 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Corey's Survey Form</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
+
 <header>
     <h1 id="title"> Welcome to the survey</h1>
     <p id="description">In this survey, you'll give me everything about you.</p>
 </header>
-<form id = "survey-form" action="/submit-survey-form">
-    <label for="name">
-        Name:<br>
-        <input id="name" type="text" name="name-label" placeholder="Enter your name">
-    </label><br>
-    <label for="email">
-        Email:<br>
-        <input id="email" type="email" name="email-label" placeholder="Enter your email">
-    </label><br>
-    <label for="number">
-        Number:<br>
-        <input id="number" type="number" name="number-label" min="10" max="11" placeholder="555-123-4567">
-    </label><br>
-    <label for="dropdown">
-        Select your role:
-        <select id="dropdown" name="dropdown-label">
-            <option value="volvo">Volvo</option>
-            <option value="volvo">Volvo</option>
-            <option value="volvo">Volvo</option>
- 
-        </select>
-    </label>
-    <br><input type="submit" value="Submit">
-</form>
+<div class="container">
+<form id="survey-form">
+    <div class="form-section">
+        <label for="name">
+            Name</label>
+            <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-entry"
+            placeholder="Enter your name"
+            required
+          />    </div>
+    <div class="form-section">
+        <label for="email">Email</label>
+        <input id="email" class="form-entry" type="email" name="email-label" placeholder="Enter your email">
+        </div>
+    <div class="form-section">
+        <label for="number">
+            Age<span class="clue">(optional)</span></label>
+            <input id="number" class="form-entry" type="number" name="number-label" min="18" max="99" placeholder="Age">
+    </div>
+    <div class="form-section">
+        <label for="dropdown">
+            <p>Select your role:</p>
+            <select id="dropdown" name="role" class="form-entry">
+                <option value="student">Student</option>
+                <option value="unemployed">Unemployed</option>
+                <option value="employed">Employed</option>
+            </select>
+        </label>
+    </div>
 
+    <div class="form-section">
+        <p>
+            Would you recommend us to a friend?</p>
+        <label><input type="radio" class="input-radio" name="recommend"> Yes</label><br>
+        <label><input type="radio" class="input-radio" name="recommend"> No</label><br>
+        <label><input type="radio" class="input-radio" name="recommend"> Maybe</label><br>
+    </div>
+    <div class="form-section">
+        <p>
+        What would you like to hear about from us? <span class="clue">(Check all that apply)</span></p>
+        <label><input type="checkbox" class="input-checkbox" name="followup"> Yes</label><br>
+        <label><input type="checkbox" class="input-checkbox" name="followup"> No</label><br>
+    </div>
+    <div class="form-section">
+        <p>Do you have any additional comments?</p>
+        <textarea class="input-textarea" id="comments" name="comments" placeholder="Your feedback helps us improve.">
+    </textarea>
+    </div class="form-section">
+    <div class="form-section">
+        <input class="button" type="submit" value="Submit">
+    </div class="form-section">
+
+</form>
+</div>
 </html>
